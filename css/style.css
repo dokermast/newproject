@@ -1,0 +1,39 @@
+.regform {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    background: #EFFFE0;
+}
+input {
+    margin: 15px 0;
+}
+h1 {
+    font-family: "Lato", "proxima-nova", "Helvetica Neue", Arial, sans-serif;
+    text-align: center;
+    color: #b26160;
+}
+form {
+    width: 85%;
+    margin: 10px auto;
+}
+
+form div {
+    margin: 3px auto;
+}
+
+.textInput {
+    margin-top: 2px;
+    height: 28px;
+    border: 1px solid #5a948c;
+    font-size: 16px;
+    padding: 1px;
+    width: 100%;
+}
+
+.val_error {
+    color: #FF1F1F;
+}
+
+.pagin {
+    padding-top: 20px;
+}

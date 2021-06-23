@@ -1,0 +1,52 @@
+{{ include('includes/header.html') }}
+
+{{ include('includes/messages.html') }}
+
+<div class="container-fluid">
+
+    {{ include('includes/main_button.html') }}
+
+    <div class="container text-center"><h5>EDIT TASK</h5></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+
+                {% if task %}
+                    <form action="/{{SITE}}/update" id="edittaskform" method="post" name="form" >
+
+                        <div class="form-group">
+                            <label for="inputName">NAME</label>
+                            <input type="text" name="name" class="form-control" id="inputName" aria-describedby="nameHelp" value="{{ task.name }}" placeholder="ENTER_NAME">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputEmail1">EMAIL_ADDRESS</label>
+                            <input type="text" name="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp" value="{{ task.email }}" placeholder="ENTER_EMAIL">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputText">TEXT</label>
+                            <textarea name="text" class="form-control" id="inputText" aria-describedby="textHelp">{{ task.text }}</textarea>
+                        </div>
+
+                        <div class="custom-control custom-checkbox">
+                            <input name="status" type="checkbox" class="custom-control-input" id="status" value="1" {{ checked }}>
+                            <label class="custom-control-label" for="status">Done</label>
+                        </div>
+
+                        <input type="text" name="id" class="form-control" id="inputId" value="{{ task.id }}" hidden>
+
+                        <p class="text-center"><button type="submit" name="form" class="btn btn-primary">UPDATE</button></p>
+                    </form>
+                {% endif %}
+
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+
+</div>
+
+{{ include('includes/footer.html') }}

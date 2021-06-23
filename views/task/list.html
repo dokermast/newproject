@@ -1,0 +1,115 @@
+{{ include('includes/header.html') }}
+
+{{ include('includes/messages.html') }}
+
+<div class="container-fluid">
+    <br>
+    <!--    BUTTONS BLOCK-->
+    <div id="buttons" class="container">
+        <p class="text-center">
+            {% if not username %}
+                <a class="btn btn-primary" href="/{{SITE}}/login">ADMIN LOGIN</a>
+            {% else %}
+                <a class="btn btn-primary" href="/{{SITE}}/logout">ADMIN LOGOUT</a>
+            {% endif %}
+            <a class="btn btn-primary" href="/{{SITE}}/create">CREATE TASK</a>
+        </p>
+    </div>
+
+    {% if tasks %}
+    <!--    TASKS LIST -->
+        <div class="text-center">
+            <h1>Tasks List</h1>
+        </div>
+
+        <div class="text-center">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <a href="{{ sort_name_up }}" class="btn btn-outline-primary" role="button" aria-pressed="true">_sort  by  name  up__</a>
+                <a href="{{ sort_email_up }}" class="btn btn-outline-primary" role="button" aria-pressed="true">_sort  by  status  up__</a>
+                <a href="{{ sort_status_up }}" class="btn btn-outline-primary" role="button" aria-pressed="true">_sort  by  email  up__</a>
+            </div>
+        </div>
+        <div class="text-center">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <a href="{{ sort_name_down }}" class="btn btn-outline-primary" role="button" aria-pressed="true">sort by name down</a>
+                <a href="{{ sort_email_down }}" class="btn btn-outline-primary" role="button" aria-pressed="true">sort by status down</a>
+                <a href="{{ sort_status_down }}" class="btn btn-outline-primary" role="button" aria-pressed="true">sort by email down</a>
+            </div>
+        </div>
+
+        <!-- TASK CARD -->
+        <div class="container">
+            {% for task in tasks %}
+                <div class="container">
+                    <div class="card" style="width: auto;">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">TASK {{ task.id }}</h5>
+
+                            <h5 class="card-title"><span style="color:deepskyblue">Created by User: </span><span>{{ task.name }}</span></h5>
+                            <h5 class="card-title"><span style="color:deepskyblue">User email: </span><span>{{ task.email }}</span></h5>
+
+                            <p class="card-text"><span style="color:green">Tasks text:</span> {{ task.text }}</p>
+
+                            {% if task.status %}
+                                <h6 class="card-title"><span style="color:deepskyblue">Execution Status:</span> Done</h6>
+                            {% else %}
+                                <h6 class="card-title"><span style="color:deepskyblue">Execution Status:</span> Not performed</h6>
+                            {% endif %}
+
+                            {% if task.edited %}
+                                <h6 class="card-title"><span style="color:deepskyblue">Edition Status:</span> Edited by Admin</h6>
+                            {% else %}
+                                <h6 class="card-title"><span style="color:deepskyblue">Edition Status:</span> Not edited</h6>
+                            {% endif %}
+
+                            {% if username %}
+                                <div class="text-center">
+                                    <a href="/{{SITE}}/edit/{{ task.id }}" class="btn btn-primary">EDIT_TASK</a>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <!--    PAGINATION -->
+        <div class="container pagin">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <!-- previous pages -->
+                        {% if curpage >  1 %}
+                            {%  for i in 1..(curpage - 1) %}
+                                <li class="page-item">
+                                    <a class="page-link" href="{{ paginlink }}{{i}}">
+                                        {{ i }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        {% endif %}
+                        <!-- curent page -->
+                        <li class="page-item">
+                            <a class="page-link text-danger" href="{{ paginlink }}{{ curpage }}">
+                                {{ curpage }}
+                            </a>
+                        </li>
+                        <!-- next pages -->
+                        {% if curpage < pagecount %}
+                            {% for i in 1..next %}
+                                <li class="page-item">
+                                    <a class="page-link" href="{{ paginlink }}{{ curpage + i }}">
+                                        {{ curpage + i }}
+                                    </a>
+                                </li>
+                             {% endfor %}
+                        {% endif %}
+                    </ul>
+                </nav>
+        </div>
+    {% else %}
+        <div class="text-center">
+            <h1>NO Tasks</h1>
+        </div>
+    {% endif %}
+</div>
+
+{{ include('includes/footer.html') }}

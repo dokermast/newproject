@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dbf9324d-d635-4e89-9697-89f7a07328cd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/classes/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Db.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/twig/extensions" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1e3UGe9oeFZJPSmBQWEVEke7N46" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bwt" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dbf9324d-d635-4e89-9697-89f7a07328cd" name="Default Changelist" comment="" />
+      <created>1593549675555</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593549675555</updated>
+      <workItem from="1593549679540" duration="238000" />
+      <workItem from="1593549943519" duration="535000" />
+      <workItem from="1593609095267" duration="996000" />
+      <workItem from="1593680163344" duration="2104000" />
+      <workItem from="1594558175941" duration="70000" />
+      <workItem from="1595682168251" duration="75000" />
+      <workItem from="1595828081663" duration="2628000" />
+      <workItem from="1596046639586" duration="869000" />
+      <workItem from="1604406836307" duration="8000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="618" y="142" key="FileChooserDialogImpl" timestamp="1604406843349">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="618" y="142" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1604406843349" />
+    <state x="618" y="142" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1596049101389" />
+  </component>
+</project>

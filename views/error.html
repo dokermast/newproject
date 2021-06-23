@@ -1,0 +1,16 @@
+{{ include('includes/header.html') }}
+
+{{ include('includes/messages.html') }}
+
+<div class="container-fluid">
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <!--<h4 class="text-center" style="color:red">YOU try to call undefined page</h4>-->
+        <h4 class="text-center" style="color:red">{{ error_message }}</h4>
+    </div>
+
+</div>
+
+{{ include('includes/footer.html') }}

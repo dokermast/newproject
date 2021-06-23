@@ -1,0 +1,44 @@
+{{ include('includes/header.html') }}
+
+{{ include('includes/messages.html') }}
+
+<div class="container-fluid">
+
+    {{ include('includes/main_button.html') }}
+
+    <div class="container text-center"><h5>CREATE TASK</h5></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+
+                <form action="/{{SITE}}/save" id="createtaskform" method="post" name="form" >
+
+                    <div class="form-group">
+                        <label for="inputName">NAME</label>
+                        <input type="text" name="name" class="form-control" id="inputName" aria-describedby="nameHelp" placeholder="ENTER_NAME">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputEmail1">EMAIL_ADDRESS</label>
+                        <input type="text" name="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp" placeholder="ENTER_EMAIL">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputText">TEXT</label>
+                        <textarea name="text" class="form-control" id="inputText" aria-describedby="textHelp" placeholder="ENTER_TEXT"></textarea>
+
+                    </div>
+
+                    <p class="text-center"><button type="submit" name="form" class="btn btn-primary">CREATE</button></p>
+                </form>
+
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+
+</div>
+
+{{ include('includes/footer.html') }}
